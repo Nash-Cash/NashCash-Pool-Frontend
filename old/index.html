@@ -1,0 +1,270 @@
+
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1">
+  
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.3/jquery.timeago.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+    <link href="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <script src="//stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+    <link href="//stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+<link rel="icon" type="image/png" sizes"32x32" href="https://avatars2.githubusercontent.com/u/43363412?s=460&v=4">
+ <link rel="icon" type="image/png" sizes="16x16" href="https://avatars2.githubusercontent.com/u/43363412?s=460&v=4">
+
+
+    <link href="themes/default.css" rel="stylesheet">
+    <link href="themes/custom.css" rel="stylesheet">
+  </head>
+  <body>
+
+    <div class="navbar-container">
+      <div class="container">
+
+        <nav class="navbar navbar-light navbar-expand-lg">
+
+		<img src="https://avatars2.githubusercontent.com/u/43363412?s=460&v=4" style="vertical-align:middle" width="50" height="50"><br />          
+
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link hot_link" data-page="home.html" href="#">
+                  <span tkey="home">Home</span>
+                </a>
+              </li>
+		<li class="nav-item">
+                <a class="nav-link hot_link" data-page="worker_stats.html" href="#worker_stats">
+                  <span tkey="stats">Worker Statistics</span>
+                </a>
+              </li>
+                            <li class="nav-item">
+                <a class="nav-link hot_link" data-page="blocks.html" href="#blocks">
+                  <span tkey="blocks">Blocks</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hot_link" data-page="payments.html" href="#payments">
+                  <span tkey="payments">Payments</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link hot_link" data-page="getting_started.html" href="#getting_started">
+                  <span tkey="help">Getting_started</span>
+                </a>
+              </li>
+<li class="nav-item">
+                <a class="nav-link hot_link" data-page="top10miners.html" href="#top10miners">
+                  <span tkey="help">Top Miner</span>
+                </a>
+              </li>
+<li class="nav-item">
+                <a class="nav-link hot_link" data-page="stats.html" href="#help">
+                  <span tkey="help">Stats</span>
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Links
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" target="_blank" href="https://fury-coin.com">
+                    <span>fury-coin.com</span>
+                  </a>
+                  <a class="dropdown-item" target="_blank" href="http://the-miners.de">
+                    <span>The-Miner's Coin</span>
+                  </a>
+                  <a class="dropdown-item" target="_blank" href="https://miningpoolstats.stream">
+                    <span>Network</span>
+                  </a>
+                  <a class="dropdown-item" target="_blank" href="https://discord.gg/7ss8Acw">
+                    <span>Discord Chat</span>
+                  </a>
+                </div>
+              </li>
+            </ul>
+
+             <div id="accountSearch" class="form-inline mt-2 mt-md-0">
+              <div id="section"><span tkey="network">Network</span>: <strong><span id="g_networkHashrate"><span tkey="na">N/A</span></span></strong>&nbsp;</div>
+        <div id="section"><span tkey="pool">&nbsp; Pool </span>: <strong><span id="g_poolHashrate"><span tkey="na">N/A </span></span></strong>&nbsp;</div>
+        <div id="section"><span tkey="you">&nbsp; You </span>: <strong><span id="g_userHashrate"><span tkey="na">N/A </span></span></strong>&nbsp;</div>
+        <div id="section"><span id="statsUpdated"><span tkey="statsUpdated"> Stats Updated</span> &nbsp;<i class="fa fa-bolt"></i></span></div>
+&nbsp&nbsp&nbsp<div id="langSelector"></div>
+
+          </div>
+        </nav>
+
+      </div>
+    </div>
+
+    <!-- Page content -->
+    <div class="container">
+      <div id="page-wrapper">
+        <div id="page"></div>
+        <p id="loading" class="text-center"><i class="fa fa-circle-o-notch fa-spin"></i></p>
+      </div>
+    </div>
+
+    <footer class="navbar fixed-bottom">
+      <div class="container text-center"><style="text-align: center;">
+        <span tkey="poweredBy">Powered by</span>
+	</span><a target="_blank" href="https://github.com/dvandal/cryptonote-nodejs-pool"><i class="fa fa-github"></i>The Miner's and cryptonote-nodejs-pool</a>
+        <span id="poolVersion"></span>
+	<span class="hidden-xs"><span tkey="openSource">&nbsp; open sourced under the</span> <a href="http://www.gnu.org/licenses/gpl-2.0.html">GPL</a>        
+      </div>
+    </footer>
+
+
+
+   <!-- Javascript -->
+<script src="config.js"></script>
+<script src="lang/languages.js"></script>
+<script src="js/common.js"></script>
+<script src="js/custom.js"></script>
+<script>
+// Store last pool statistics
+var lastStats;
+
+// Get current miner address
+function getCurrentAddress() {
+    var urlWalletAddress = location.search.split('wallet=')[1] || 0;
+    var address = urlWalletAddress || docCookies.getItem('mining_address');
+    return address;
+}
+
+// Pulse live update
+function pulseLiveUpdate(){
+    var stats_update = document.getElementById('statsUpdated');
+    stats_update.style.transition = 'opacity 100ms ease-out';
+    stats_update.style.opacity = 1;
+    setTimeout(function(){
+        stats_update.style.transition = 'opacity 7000ms linear';
+        stats_update.style.opacity = 0;
+    }, 500);
+}
+
+// Update live informations
+function updateLiveStats(data) {
+    pulseLiveUpdate();   
+    lastStats = data;
+    if (lastStats && lastStats.pool && lastStats.pool.totalMinersPaid.toString() == '-1'){
+        lastStats.pool.totalMinersPaid = 0;
+    }
+    updateIndex();
+    if (currentPage) currentPage.update();
+}
+
+// Update global informations
+function updateIndex(){
+    updateText('coinSymbol', lastStats.config.symbol);
+    updateText('g_networkHashrate', getReadableHashRateString(lastStats.network.difficulty / lastStats.config.coinDifficultyTarget) + '/sec');
+    updateText('g_poolHashrate', getReadableHashRateString(lastStats.pool.hashrate) + '/sec');    
+    if (lastStats.miner && lastStats.miner.hashrate){
+         updateText('g_userHashrate', getReadableHashRateString(lastStats.miner.hashrate) + '/sec');
+    }
+    else{
+        updateText('g_userHashrate', 'N/A');
+    }    
+    updateText('poolVersion', lastStats.config.version);
+}
+
+// Load live statistics
+function loadLiveStats(reload) {
+    var apiURL = api + '/stats';
+    
+    var address = getCurrentAddress();
+    if (address) { apiURL = apiURL + '?address=' + encodeURIComponent(address); }
+
+    if (xhrLiveStats) xhrLiveStats.abort();
+    
+    $.get(apiURL, function(data){        
+        updateLiveStats(data);
+        if (!reload) routePage(fetchLiveStats);
+    });
+}
+
+// Fetch live statistics
+var xhrLiveStats;
+function fetchLiveStats() {
+    var apiURL = api + '/live_stats';
+
+    var address = getCurrentAddress();
+    if (address) { apiURL = apiURL + '?address=' + encodeURIComponent(address); }
+    
+    xhrLiveStats = $.ajax({
+        url: apiURL,
+        dataType: 'json',
+        cache: 'false'
+    }).done(function(data){
+        updateLiveStats(data);
+    }).always(function(){
+        fetchLiveStats();
+    });
+}
+
+// Initialize
+$(function(){
+    // Load current theme if not default
+    if (themeCss && themeCss != 'themes/default.css') {
+        $("head").append("<link rel='stylesheet' href=" + themeCss + ">");
+    }
+    
+    // Add support informations to menu    
+    if (typeof telegram !== 'undefined' && telegram) {
+        $('#menu-content').append('<li><a target="_new" href="'+telegram+'"><i class="fa fa-telegram"></i> <span tkey="telegram">Telegram group</span></a></li>');
+    }
+    if (typeof discord !== 'undefined' && discord) {
+        $('#menu-content').append('<li><a target="_new" href="'+discord+'"><i class="fa fa-ticket"></i> <span tkey="discord">Discord</span></a></li>');
+    }
+    if (typeof email !== 'undefined' && email) {
+        $('#menu-content').append('<li><a target="_new" href="mailto:'+email+'"><i class="fa fa-envelope"></i> <span tkey="contactUs">Contact Us</span></a></li>');
+    }
+    if (typeof langs !== 'undefined' && langs) {
+        $('#menu-content').append('<div id="mLangSelector"></div>');
+	renderLangSelector();
+   
+}
+	
+    // Load live statistics for the first time
+    loadLiveStats();
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/@widgetbot/crate@3" async defer>
+  const button = new Crate({
+    server: '399253634510225418',
+    channel: '399253634510225421',
+    defer: true
+  })
+  
+  // Random color every 300 milliseconds
+  setInterval(() => {
+    button.options.color = "#000000".replace(/0/g, () => {
+          return (~~(Math.random() * 16)).toString(16)
+        })
+  }, 300)
+  
+  </script>
+<div align='center'>
+
+ </div>
+</body>
+</html>

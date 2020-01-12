@@ -1,0 +1,27 @@
+/* Insert your pool's unique CSS here */
+.nav-side-menu .brand {
+    background: rgba(30,115,190,0.9);
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#026483+0,3398c6+100,7db9e8+100,3398c6+100,3398c6+100,3398c6+100 */
+background: #026483; /* Old browsers */
+background: -moz-linear-gradient(45deg, #026483 0%, #3398c6 100%, #7db9e8 100%, #3398c6 100%, #3398c6 100%, #3398c6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #026483 0%,#3398c6 100%,#7db9e8 100%,#3398c6 100%,#3398c6 100%,#3398c6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #026483 0%,#3398c6 100%,#7db9e8 100%,#3398c6 100%,#3398c6 100%,#3398c6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026483', endColorstr='#3398c6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.brand img.img-responsive {
+    margin: 0 auto;
+}
+
+#top-bar  {
+	background-color: #3398c6;
+}
+
+.hashInfo, .infoBox {
+background: #026483; /* Old browsers */
+background: -moz-linear-gradient(45deg, #026483 0%, #3398c6 100%, #7db9e8 100%, #3398c6 100%, #3398c6 100%, #3398c6 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, #026483 0%,#3398c6 100%,#7db9e8 100%,#3398c6 100%,#3398c6 100%,#3398c6 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, #026483 0%,#3398c6 100%,#7db9e8 100%,#3398c6 100%,#3398c6 100%,#3398c6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#026483', endColorstr='#3398c6',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
